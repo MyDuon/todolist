@@ -1,8 +1,11 @@
 import { useState } from "react";
 import './AddTodo.css'
 
+interface AddTodoComponent {
+  onAddTodo: (todo: string) => void;
+}
 
-function AddTodo({ onAddTodo = (task: string) => {} }) {
+function AddTodo({ onAddTodo }: AddTodoComponent) {
   const [task, setTask] = useState<string>("");
 
   return(

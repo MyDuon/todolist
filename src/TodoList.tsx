@@ -24,8 +24,8 @@ function TodoList() {
 
     setId(id + 1);
     setTodoList([...todoList, task]);
-    console.log(todoList)
   }
+  console.log(todoList);
 
   return (
     <>
