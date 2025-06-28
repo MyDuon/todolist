@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Todolist.css'
-import AddTodo from './AddTodo'
+import AddTodo from './AddTodo.tsx'
 
 // Define the type for a task
 interface Task {
@@ -29,7 +29,7 @@ function TodoList() {
 
   return (
     <>
-      <AddTodo/>
+      <AddTodo onAddTodo={addTask}/>
       <h1 className='header'>todolist</h1>
       <button onClick={() => addTask("play games")}>button</button>
       <ul>
